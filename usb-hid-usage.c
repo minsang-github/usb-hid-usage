@@ -1,7 +1,10 @@
 #include "usb-hid-usage.h"
-
+#include "asprintf.h"
 #include <stdio.h>
 #include <string.h>
+
+#undef strdup
+#define strdup _strdup
 
 /**
  * Returns a string containing a verbal description of the specified USB HID usage.
